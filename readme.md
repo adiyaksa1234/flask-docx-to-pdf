@@ -3,9 +3,13 @@ A simple web app built with Flask that allows users to convert docx files to PDF
 
 ## Requirements
 Python 3
+\
 Flask
+\
 Flask Toastr
+\
 Unoconv
+\
 LibreOffice
 ## Installation
 Clone the repository: git clone https://github.com/adiyaksa1234/flask-docx-to-pdf
