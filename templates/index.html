@@ -14,26 +14,32 @@
             padding-bottom: 70px;
           }
     </style>
+    {{ toastr.include_jquery() }}
+    {{ toastr.include_toastr_css() }}
+    {{ toastr.message() }}
 </head>
 
 <body>
+    {{ toastr.include_toastr_js() }}
     <div class="container form-floating">
         <div class="col-md-12 text-center mx-auto">
              <h1 class="text" class="text-center">Flask Convert</h1>
             <form action="/" method="POST" enctype="multipart/form-data">
                 <div class="mb-2">
                     <label for="formFile" class="form-label text-primary">Enter the docx file to convert to pdf, you can drag your file to the form input</label>
-                    <input class="form-control" type="file" id="formFile" required>
+                    <input class="form-control shadow-xl text-dark rounded-4 col-3" type="file" name="formFile" id="formFile" accept=".docx" >
                   </div>
                 <div class="pt-3">
-                    <input type="submit" class="btn btn-primary col-4 mx-auto" value="Convert" id="submit">
+                    <input type="submit" class="btn btn-primary shadow-xl rounded-4 col-4 mx-auto" value="Convert" id="submit">
                 </div>
-                {% if download %}
-                <div class="pt-3">
-                    <input type="submit" class="btn btn-success col-4 mx-auto float-right" value="Download" id="submit">
-                </div>
-                {% endif %}
             </form>
+            {% if download %}
+            <form action="{{ url_for('download') }}"" method="get">      
+                <div class="pt-3">
+                    <input type="submit"href="{{ url_for('download') }}" class="btn btn-success col-4 rounded-4 shadow-xl mx-auto float-right" value="Download" id="submit">
+                </div>
+            </form>
+            {% endif %}
         </div>
     </div>
     <script>
