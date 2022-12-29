@@ -22,7 +22,7 @@ Install the required packages:
 
 ```sudo apt-get install unoconv```
 
-```pip install -r requirements.txt```
+```pip3 install -r requirements.txt```
 
 Run the app: python app.py
 Usage
