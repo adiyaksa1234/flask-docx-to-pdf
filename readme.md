@@ -16,8 +16,8 @@ LibreOffice
 ## Installation
 Clone the repository: git clone https://github.com/adiyaksa1234/flask-docx-to-pdf
 Navigate to the project directory: cd flask-docx-to-pdf
-Install the required packages: ```
-sudo apt-get install unoconv```
+Install the required packages: 
+```sudo apt-get install unoconv```
 ```pip install -r requirements.txt ```
 Run the app: python app.py
 Usage
